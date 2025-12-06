@@ -12,7 +12,7 @@ function RestaurantCard({ restaurant, onRemoveRating }) {
       <div className="card-right">
         <div className="card-right-content"> {/* New container for text content */}
           <h3 className="restaurant-name">
-            <strong><Link to={`/${restaurant.id}`}>{restaurant.name}</Link></strong>
+            <strong><Link to={`/restaurants/${restaurant.id}/ratings`}>{restaurant.name}</Link></strong>
           </h3>
           <div className="restaurant-rating">
             <StarRating rating={restaurant.averageRating} />

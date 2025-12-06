@@ -5,36 +5,22 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import { useState } from "react";
 
-
-
 function App() {
-
-  
-
   return (
-    
     <Router>
       <div>
         {/* Navigation Bar (optional) */}
         <nav>
           <ul>
             <li>
-              <Link to="/">Ratings</Link>
+              <Link to="/">Restaurants</Link>
             </li>
-            <li>
-              <Link to="/restaurants">Restaurants</Link>
-            </li>
-           
-            
           </ul>
         </nav>
 
-       
         <Routes>
-          
-          <Route path="/:id" element={<RatingsByRestaurant />} />
           <Route path="/" element={<RestaurantList />} />
-          
+          <Route path="/restaurants/:id/ratings" element={<RatingsByRestaurant />} />
         </Routes>
       </div>
     </Router>
